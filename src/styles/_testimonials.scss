@@ -1,0 +1,48 @@
+@import "vars";
+@import "mixins";
+
+.testimonials {
+  padding: 50px 0 150px;
+
+  background-color: $c-main;
+  color: $c-main-inv;
+
+  &__title {
+    @include title;
+
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+
+    width: 883px;
+
+    margin: 0 auto;
+  }
+}
+
+.testimonial {
+  width: 430px;
+
+  padding: 40px;
+
+  border: 1px solid #dedede;
+  border-radius: 10px;
+
+  &__header {
+    display: flex;
+
+    height: 50px;
+
+    margin-bottom: 50px;
+  }
+
+  &__photo {
+    height: 100%;
+
+    margin-right: 15px;
+  }
+}
