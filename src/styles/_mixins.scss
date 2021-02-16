@@ -3,8 +3,9 @@
 @mixin button {
   display: block;
 
-  width: 139px;
   height: 52px;
+
+  padding: 10px 30px;
 
   border: 1px solid $c-main-inv;
 
@@ -12,9 +13,8 @@
   color: $c-main-inv;
 
   font-family: inherit;
-  letter-spacing: 1px;
-  line-height: 52px;
   font-weight: 400;
+  letter-spacing: 1px;
 
   transition: all $a-short;
 
@@ -27,7 +27,7 @@
 @mixin accentButton {
   display: block;
 
-  padding: 20px 36px;
+  padding: 10px 36px;
   border: 1px solid $c-accent;
 
   background-color: $c-accent;
