@@ -1,0 +1,23 @@
+@import "vars";
+
+@mixin button {
+  width: 139px;
+  height: 52px;
+
+  border: 1px solid $c-main-inv;
+
+  background-color: transparent;
+  color: $c-main-inv;
+
+  font-family: inherit;
+  letter-spacing: 1px;
+  line-height: 52px;
+  font-weight: 400;
+
+  transition: all $a-short;
+
+  &:hover {
+    background-color: $c-main-inv;
+    color: $c-main;
+  }
+}
