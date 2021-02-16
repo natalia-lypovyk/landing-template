@@ -1,0 +1,75 @@
+@import "vars";
+@import "mixins";
+
+.contents {
+  padding: 50px 0 150px;
+
+  background-color: $c-main;
+  color: $c-main-inv;
+
+  &__title {
+    @include title;
+
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    @include subtitle;
+
+    margin-bottom: 45px;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 985px;
+
+    margin: 0 auto;
+  }
+}
+
+.card {
+  max-width: 476px;
+
+  padding: 40px 35px;
+
+  border-radius: 10px;
+
+  background-color: $c-main-inv;
+  color: $c-main;
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    line-height: 30px;
+    text-align: center;
+  }
+
+  &__text {
+    max-width: 280px;
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  &__button {
+    @include accentButton;
+
+    margin: 57px auto;
+
+    &_smaller-margin {
+      @include accentButton;
+
+      margin: 30px auto;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+}

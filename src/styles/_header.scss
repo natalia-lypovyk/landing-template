@@ -96,18 +96,7 @@
   margin: 0 auto 35px;
 
   &__try {
-    @include button;
-
-    border-color: $c-accent;
-
-    background-color: $c-accent;
-
-    &:hover {
-      border: 1px solid $c-accent;
-
-      color: $c-accent;
-      background-color: transparent;
-    }
+    @include accentButton;
   }
 
   &__learn {

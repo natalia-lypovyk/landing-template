@@ -1,6 +1,8 @@
 @import "vars";
 
 @mixin button {
+  display: block;
+
   width: 139px;
   height: 52px;
 
@@ -19,6 +21,28 @@
   &:hover {
     background-color: $c-main-inv;
     color: $c-main;
+  }
+}
+
+@mixin accentButton {
+  display: block;
+
+  padding: 20px 36px;
+  border: 1px solid $c-accent;
+
+  background-color: $c-accent;
+  color: $c-main-inv;
+
+  font-family: inherit;
+  letter-spacing: 1px;
+
+  transition: all $a-short;
+
+  &:hover {
+    border: 1px solid $c-accent;
+
+    color: $c-accent;
+    background-color: transparent;
   }
 }
 
