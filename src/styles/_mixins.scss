@@ -21,3 +21,21 @@
     color: $c-main;
   }
 }
+
+@mixin title {
+  font-size: 52px;
+  line-height: 62px;
+
+  text-align: center;
+}
+
+@mixin subtitle {
+  max-width: 600px;
+
+  margin: 0 auto 80px;
+
+  font-size: 20px;
+  line-height: 30px;
+
+  text-align: center;
+}
