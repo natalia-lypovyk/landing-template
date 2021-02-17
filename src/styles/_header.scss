@@ -45,9 +45,8 @@
     font-size: 20px;
     line-height: 30px;
     text-align: center;
-    overflow: hidden;
 
-    animation: appear $a-long linear;
+    animation: appear 2s 1s linear backwards;
 
     @include _760 {
       margin-bottom: 50px;
@@ -157,11 +156,8 @@
 }
 
 @keyframes appear {
-  0% {
+  from {
     opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
