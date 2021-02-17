@@ -6,24 +6,39 @@
 
   padding: 80px 0;
 
-  &__block {
-    max-width: 1219px;
-    height: 370px;
-
-    margin: 0 auto;
-
-    border-radius: 33px;
-
-    background-color: $c-secondary-bg;
+  @include _760 {
+    background-color: $c-secondary-bg-mobile;
   }
 }
+
 .block {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
   position: relative;
 
+  max-width: 1219px;
+  width: 90%;
+  height: 370px;
+
+  margin: 0 auto;
+
+  border-radius: 33px;
+
+  background-color: $c-secondary-bg;
+
   overflow: hidden;
+
+  @include _760 {
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    height: fit-content;
+
+    border-radius: 0;
+
+    background-color: $c-secondary-bg-mobile;
+  }
 
   &__text {
     display: flex;
@@ -32,11 +47,19 @@
     justify-content: space-between;
 
     padding: 75px 45px;
+
+    @include _760 {
+      align-items: center;
+    }
   }
 
   &__title {
     @include title;
     font-weight: 400;
+
+    @include _760 {
+      margin-bottom: 20px;
+    }
   }
 
   &__button {
@@ -51,5 +74,11 @@
 
     width: 50%;
     height: auto;
+    
+    @include _760 {
+      position: static;
+
+      width: 80%;
+    }
   }
 }

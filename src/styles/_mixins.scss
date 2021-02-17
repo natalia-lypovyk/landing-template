@@ -1,5 +1,17 @@
 @import "vars";
 
+@mixin _760 {
+  @media screen and (max-width: 760px) {
+    @content;
+  }
+}
+
+@mixin _540 {
+  @media screen and (max-width: 540px) {
+    @content;
+  }
+}
+
 @mixin button {
   display: block;
 
@@ -54,10 +66,23 @@
   text-align: center;
 
   letter-spacing: 2px;
+
+  @include _760 {
+    font-size: 48px;
+    font-weight: 400;
+
+    line-height: 58px;
+  }
+
+  @include _540 {
+    font-size: 40px;
+    line-height: 50px;
+  }
 }
 
 @mixin subtitle {
   max-width: 600px;
+  width: 90%;
 
   margin: 0 auto 80px;
 
@@ -65,9 +90,18 @@
   line-height: 30px;
 
   text-align: center;
+
+  @include _760 {
+    font-size: 18px;
+  }
+
+  @include _540 {
+    font-size: 16px;
+  }
 }
 
 @mixin theme {
   background-color: $c-main;
   color: $c-main-inv;
 }
+

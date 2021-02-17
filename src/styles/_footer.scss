@@ -7,19 +7,45 @@
   background-color: $c-main;
   color: $c-main-inv;
 
+  @include _760 {
+    padding: 50px 30px;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas:
     "col1 col2 col3 . info info";
 
-    width: 1031px;
+    max-width: 1031px;
+    width: 90%;
 
     margin: 0 auto;
+
+    @include _760 {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "col1 col2 col3"
+        "info info info";
+    }
+
+    @include _540 {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas:
+        "col1"
+        "col2"
+        "col3"
+        "info";
+    }
   }
 }
 
 .col {
+  @include _760 {
+    margin-bottom: 30px;
+  }
+
   &__title {
     display: block;
 
@@ -67,8 +93,6 @@
     margin-bottom: 30px;
 
     & .icon {
-      display: block;
-
       margin: 0 13px;
     }
   }
