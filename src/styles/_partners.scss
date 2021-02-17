@@ -2,10 +2,9 @@
 @import "mixins";
 
 .partners {
-  padding: 50px 0;
+  @include theme;
 
-  background-color: $c-main;
-  color: $c-main-inv;
+  padding: 50px 0;
 
   &__title {
     @include title;
@@ -37,5 +36,11 @@
   &__image {
     height: 100%;
     width: auto;
+
+    transition: transform $a-short;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }

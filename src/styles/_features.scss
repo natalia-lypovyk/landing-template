@@ -1,11 +1,10 @@
 @import "vars";
-@import "mixins"
-;
-.features {
-  padding: 100px 0 20px;
+@import "mixins";
 
-  background-color: $c-main;
-  color: $c-main-inv;
+.features {
+  @include theme;
+
+  padding: 100px 0 20px;
 
   &__title {
     @include title;

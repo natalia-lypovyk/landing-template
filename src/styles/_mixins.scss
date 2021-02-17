@@ -66,3 +66,8 @@
 
   text-align: center;
 }
+
+@mixin theme {
+  background-color: $c-main;
+  color: $c-main-inv;
+}

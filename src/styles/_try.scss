@@ -2,13 +2,11 @@
 @import "mixins";
 
 .try {
+  @include theme;
+
   padding: 80px 0;
 
-  background-color: $c-main;
-  color: $c-main-inv;
-
   &__block {
-
     max-width: 1219px;
     height: 370px;
 
@@ -16,7 +14,7 @@
 
     border-radius: 33px;
 
-    background-color: #343434;
+    background-color: $c-secondary-bg;
   }
 }
 .block {

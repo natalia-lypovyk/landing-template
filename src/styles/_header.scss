@@ -2,10 +2,9 @@
 @import "mixins";
 
 .header {
-  padding-bottom: 50px;
+  @include theme;
 
-  background-color: $c-main;
-  color: $c-main-inv;
+  padding-bottom: 50px;
 
   &__title {
     display: block;
@@ -18,6 +17,8 @@
 
     text-align: center;
     line-height: 88px;
+
+    animation: appear $a-long linear;
   }
 
   &__subtitle {
@@ -30,6 +31,9 @@
     font-size: 20px;
     line-height: 30px;
     text-align: center;
+    overflow: hidden;
+
+    animation: appear $a-long linear;
   }
 
   &__background {
@@ -54,22 +58,24 @@
   padding: 20px 30px;
 
   &__logo {
-    width: 206px;
-    height: auto;
+    width: auto;
+    height: 100%;
   }
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
-    height: 44px;
+    height: 78px;
 
-    padding: 10px;
+    animation: appearFromTop 2s ease-in;
   }
 
   &__login {
     @include button;
+
+    width: 139px;
   }
 }
 
@@ -79,7 +85,7 @@
   }
 
   &__item:hover {
-    color: #43b6ff;
+    color: $c-accent;
   }
 
   &__item:not(:last-child) {
@@ -101,5 +107,24 @@
 
   &__learn {
     @include button;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appearFromTop {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateX(0);
   }
 }

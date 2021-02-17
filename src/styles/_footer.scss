@@ -21,6 +21,8 @@
 
 .col {
   &__title {
+    display: block;
+
     margin-bottom: 30px;
 
     font-size: 20px;
@@ -30,6 +32,8 @@
   }
   
   &__text {
+    display: block;
+
     margin-bottom: 10px;
   }
 
@@ -83,5 +87,9 @@
     width: auto;
 
     margin-right: 25px;
+
+    &:hover {
+      filter: invert(70%) sepia(85%) saturate(5100%) hue-rotate(210deg) brightness(100%) contrast(93%);
+    }
   }
 }

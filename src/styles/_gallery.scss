@@ -2,10 +2,9 @@
 @import "mixins";
 
 .gallery {
-  padding: 50px 0 150px;
+  @include theme;
 
-  background-color: $c-main;
-  color: $c-main-inv;
+  padding: 50px 0 150px;
 
   &__title {
     @include title;
