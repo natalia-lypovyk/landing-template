@@ -2,8 +2,6 @@
 @import "mixins";
 
 .header {
-  @include theme;
-
   padding-bottom: 50px;
 
   &__title {
@@ -108,8 +106,6 @@
   }
 
   &__login {
-    @include button;
-
     width: 139px;
   }
 }
@@ -137,15 +133,9 @@
   margin: 0 auto 35px;
 
   &__try {
-    @include accentButton;
-
     @include _760 {
       margin-bottom: 20px;
     }
-  }
-
-  &__learn {
-    @include button;
   }
 
   @include _760 {

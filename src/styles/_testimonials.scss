@@ -2,13 +2,9 @@
 @import "mixins";
 
 .testimonials {
-  @include theme;
-
   padding: 50px 0 150px;
 
   &__title {
-    @include title;
-
     margin-bottom: 50px;
   }
 

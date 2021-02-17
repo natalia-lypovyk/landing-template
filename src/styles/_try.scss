@@ -2,8 +2,6 @@
 @import "mixins";
 
 .try {
-  @include theme;
-
   padding: 80px 0;
 
   @include _760 {
@@ -54,7 +52,6 @@
   }
 
   &__title {
-    @include title;
     font-weight: 400;
 
     @include _760 {
@@ -63,7 +60,6 @@
   }
 
   &__button {
-    @include accentButton;
     width: 232px;
   }
 

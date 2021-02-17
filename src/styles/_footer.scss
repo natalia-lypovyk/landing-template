@@ -4,9 +4,6 @@
 .footer {
   padding: 107px 0;
 
-  background-color: $c-main;
-  color: $c-main-inv;
-
   @include _760 {
     padding: 50px 30px;
   }

@@ -8,14 +8,10 @@
   color: $c-main-inv;
 
   &__title {
-    @include title;
-
     margin-bottom: 10px;
   }
 
   &__subtitle {
-    @include subtitle;
-
     margin-bottom: 45px;
 
     @include _760 {
@@ -80,13 +76,9 @@
   }
 
   &__button {
-    @include accentButton;
-
     margin: 57px auto;
 
     &_smaller-margin {
-      @include accentButton;
-
       margin: 30px auto;
     }
   }
