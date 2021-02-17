@@ -1,3 +1,17 @@
+@import "vars";
+
+@mixin _1050 {
+  @media screen and (max-width: 1050px) {
+    @content;
+  }
+}
+
+@mixin _900 {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}
+
 @mixin _760 {
   @media screen and (max-width: 760px) {
     @content;
@@ -8,4 +22,9 @@
   @media screen and (max-width: 540px) {
     @content;
   }
+}
+
+@mixin theme {
+  background-color: $c-main;
+  color: $c-main-inv;
 }
