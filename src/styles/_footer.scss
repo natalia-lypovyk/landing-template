@@ -89,9 +89,13 @@
 
     margin-bottom: 30px;
 
-    & .icon {
+    & .info__icon {
       margin: 0 13px;
     }
+  }
+
+  &__text:last-child {
+    display: flex;
   }
 }
 
