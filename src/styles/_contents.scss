@@ -50,6 +50,10 @@
   background-color: $c-main-inv;
   color: $c-main;
 
+  &:first-of-type {
+    margin-right: 20px;
+  }
+
   @include _760 {
     &:first-child {
       margin-bottom: 30px;
