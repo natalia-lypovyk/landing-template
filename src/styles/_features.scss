@@ -22,8 +22,14 @@
     display: flex;
 
     max-width: 1088px;
+    width: 90%;
 
     margin: 0 auto 62px;
+
+    @include _760 {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__list {
@@ -38,7 +44,8 @@
 .images {
   position: relative;
 
-  width: 752px;
+  max-width: 752px;
+  width: 100%;
 
   padding: 0 28px;
 
@@ -60,6 +67,10 @@
 .item {
   display: flex;
   flex-direction: column;
+
+  @include _760 {
+    margin-bottom: 40px;
+  }
 
   &__icon {
     width: auto;

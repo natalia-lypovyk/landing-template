@@ -17,6 +17,11 @@
     @include subtitle;
 
     margin-bottom: 45px;
+
+    @include _760 {
+      width: 60%;
+      letter-spacing: 1px;
+    }
   }
 
   &__block {
@@ -24,8 +29,14 @@
     justify-content: space-between;
 
     max-width: 985px;
+    width: 90%;
 
     margin: 0 auto;
+
+    @include _760 {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
 
@@ -38,6 +49,12 @@
 
   background-color: $c-main-inv;
   color: $c-main;
+
+  @include _760 {
+    &:first-child {
+      margin-bottom: 30px;
+    }
+  }
 
   &__title {
     margin-bottom: 20px;

@@ -10,6 +10,7 @@
     display: block;
 
     max-width: 750px;
+    width: 90%;
 
     margin: 0 auto 15px;
 
@@ -19,12 +20,25 @@
     line-height: 88px;
 
     animation: appear $a-long linear;
+
+    @include _760 {
+      font-size: 52px;
+      font-weight: 400;
+
+      line-height: 62px;
+    }
+
+    @include _540 {
+      font-size: 48px;
+      line-height: 58px;
+    }
   }
 
   &__subtitle {
     display: block;
 
     max-width: 605px;
+    width: 90%;
 
     margin: 0 auto 85px;
 
@@ -34,15 +48,33 @@
     overflow: hidden;
 
     animation: appear $a-long linear;
+
+    @include _760 {
+      margin-bottom: 50px;
+
+      font-size: 20px;
+      font-weight: 400;
+
+      line-height: 30px;
+    }
+
+    @include _540 {
+      font-size: 16px;
+      line-height: 26px;
+    }
   }
 
   &__background {
-    display: block;
-
-    height: 840px;
-    width: auto;
+    max-height: 840px;
+    width: 100%;
+    object-fit: contain;
 
     margin: 0 auto;
+
+    @include _760 {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
@@ -70,6 +102,10 @@
     height: 78px;
 
     animation: appearFromTop 2s ease-in;
+
+    @include _760 {
+      display: none;
+    }
   }
 
   &__login {
@@ -103,10 +139,20 @@
 
   &__try {
     @include accentButton;
+
+    @include _760 {
+      margin-bottom: 20px;
+    }
   }
 
   &__learn {
     @include button;
+  }
+
+  @include _760 {
+    flex-direction: column;
+
+    width: 175px;
   }
 }
 
