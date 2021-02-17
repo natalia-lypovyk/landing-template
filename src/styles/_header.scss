@@ -1,0 +1,130 @@
+@import "vars";
+@import "mixins";
+
+.header {
+  @include theme;
+
+  padding-bottom: 50px;
+
+  &__title {
+    display: block;
+
+    max-width: 750px;
+
+    margin: 0 auto 15px;
+
+    font-size: 80px;
+
+    text-align: center;
+    line-height: 88px;
+
+    animation: appear $a-long linear;
+  }
+
+  &__subtitle {
+    display: block;
+
+    max-width: 605px;
+
+    margin: 0 auto 85px;
+
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    overflow: hidden;
+
+    animation: appear $a-long linear;
+  }
+
+  &__background {
+    display: block;
+
+    height: 840px;
+    width: auto;
+
+    margin: 0 auto;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1097px;
+  height: 119px;
+
+  margin: 0 auto 90px;
+  padding: 20px 30px;
+
+  &__logo {
+    width: auto;
+    height: 100%;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 78px;
+
+    animation: appearFromTop 2s ease-in;
+  }
+
+  &__login {
+    @include button;
+
+    width: 139px;
+  }
+}
+
+.list {
+  &__item {
+    transition: color $a-short;
+  }
+
+  &__item:hover {
+    color: $c-accent;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+
+  width: 387px;
+
+  margin: 0 auto 35px;
+
+  &__try {
+    @include accentButton;
+  }
+
+  &__learn {
+    @include button;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appearFromTop {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,53 @@
+@import "vars";
+@import "mixins";
+
+.gallery {
+  @include theme;
+
+  padding: 50px 0 150px;
+
+  &__title {
+    @include title;
+  }
+
+  &__subtitle {
+    @include subtitle;
+  }
+}
+
+.list {
+  width: 1087px;
+  margin: 0 auto;
+
+  &__button {
+    @include button;
+
+    margin: 44px auto 0;
+  }
+
+  &__image {
+    display: block;
+
+    height: 100%;
+    width: auto;
+
+    border-radius: 8px;
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+
+  height: 285px;
+
+  margin: 44px 0 44px;
+  padding: 0 44px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+
+  height: 285px;
+}

@@ -1,0 +1,95 @@
+@import "vars";
+@import "mixins";
+
+.footer {
+  padding: 107px 0;
+
+  background-color: $c-main;
+  color: $c-main-inv;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+    "col1 col2 col3 . info info";
+
+    width: 1031px;
+
+    margin: 0 auto;
+  }
+}
+
+.col {
+  &__title {
+    display: block;
+
+    margin-bottom: 30px;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    line-height: 30px;
+  }
+  
+  &__text {
+    display: block;
+
+    margin-bottom: 10px;
+  }
+
+  &__1 {
+    grid-area: col1;
+  }
+
+  &__2 {
+    grid-area: col2;
+  }
+
+  &__3 {
+    grid-area: col3;
+  }
+}
+
+.info {
+  grid-area: info;
+
+  &__locality {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    & .icon {
+      display: block;
+
+      margin: 0 13px;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+
+  height: 40px;
+
+  padding-left: 10px;
+
+  &__icon {
+    height: 100%;
+    width: auto;
+
+    margin-right: 25px;
+
+    &:hover {
+      filter: invert(70%) sepia(85%) saturate(5100%) hue-rotate(210deg) brightness(100%) contrast(93%);
+    }
+  }
+}
