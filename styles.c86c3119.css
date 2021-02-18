@@ -570,28 +570,28 @@ img {
 }
 
 @media screen and (max-width: 760px) {
-  .col {
+  .column {
     margin-bottom: 30px;
   }
 }
-.col__title {
+.column__title {
   display: block;
   margin-bottom: 30px;
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
 }
-.col__text {
+.column__text {
   display: block;
   margin-bottom: 10px;
 }
-.col__1 {
+.column__1 {
   grid-area: col1;
 }
-.col__2 {
+.column__2 {
   grid-area: col2;
 }
-.col__3 {
+.column__3 {
   grid-area: col3;
 }
 
