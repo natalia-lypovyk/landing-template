@@ -327,9 +327,13 @@ img {
   margin: 44px auto 0;
 }
 .list__image {
-  height: 100%;
-  width: auto;
+  max-width: 100%;
+  min-width: 25%;
   border-radius: 8px;
+  object-fit: cover;
+}
+.list__image:not(:last-child) {
+  margin-right: 15px;
 }
 @media screen and (max-width: 760px) {
   .list__image:not(:last-child) {
@@ -340,7 +344,7 @@ img {
 .top {
   display: flex;
   justify-content: space-between;
-  max-height: 285px;
+  align-items: stretch;
   width: 100%;
   margin: 44px 0 44px;
   padding: 0 44px;
@@ -356,7 +360,7 @@ img {
 .bottom {
   display: flex;
   justify-content: space-between;
-  height: 285px;
+  align-items: stretch;
 }
 @media screen and (max-width: 760px) {
   .bottom {
