@@ -2,20 +2,12 @@
 @import "mixins";
 
 .features {
-  @include theme;
-
   padding: 100px 0 20px;
 
   &__title {
-    @include title;
-
     margin-bottom: 27px;
 
     text-transform: uppercase;
-  }
-
-  &__subtitle {
-    @include subtitle;
   }
 
   &__content {

@@ -1,0 +1,96 @@
+@import "vars";
+@import "mixins";
+
+.theme {
+  background-color: $c-main;
+  color: $c-main-inv;
+}
+
+.title {
+  font-size: 52px;
+  line-height: 62px;
+
+  text-align: center;
+
+  letter-spacing: 2px;
+
+  @include _760 {
+    font-size: 48px;
+    font-weight: 400;
+
+    line-height: 58px;
+  }
+
+  @include _540 {
+    font-size: 40px;
+
+    line-height: 50px;
+  }
+}
+
+.subtitle {
+  max-width: 600px;
+  width: 90%;
+
+  margin: 0 auto 80px;
+
+  font-size: 20px;
+  line-height: 30px;
+
+  text-align: center;
+
+  @include _760 {
+    font-size: 18px;
+  }
+
+  @include _540 {
+    font-size: 16px;
+  }
+}
+
+.button {
+  display: block;
+
+  height: 52px;
+
+  padding: 10px 30px;
+
+  border: 1px solid $c-main-inv;
+
+  background-color: transparent;
+  color: $c-main-inv;
+
+  font-family: inherit;
+  font-weight: 400;
+  letter-spacing: 1px;
+
+  transition: all $a-short;
+
+  &:hover {
+    background-color: $c-main-inv;
+    color: $c-main;
+  }
+}
+
+.accent-button {
+  display: block;
+
+  padding: 10px 36px;
+
+  border: 1px solid $c-accent;
+
+  background-color: $c-accent;
+  color: $c-main-inv;
+
+  font-family: inherit;
+  letter-spacing: 1px;
+
+  transition: all $a-short;
+
+  &:hover {
+    border: 1px solid $c-accent;
+
+    color: $c-accent;
+    background-color: transparent;
+  }
+}

@@ -2,17 +2,7 @@
 @import "mixins";
 
 .gallery {
-  @include theme;
-
   padding: 50px 0 150px;
-
-  &__title {
-    @include title;
-  }
-
-  &__subtitle {
-    @include subtitle;
-  }
 }
 
 .list {
@@ -22,16 +12,20 @@
   margin: 0 auto;
 
   &__button {
-    @include button;
-
     margin: 44px auto 0;
   }
 
   &__image {
-    height: 100%;
-    width: auto;
+    max-width: 100%;
+    min-width: 25%;
 
     border-radius: 8px;
+
+    object-fit: cover;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
 
     @include _760 {
       &:not(:last-child) {
@@ -44,8 +38,9 @@
 .top {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
 
-  height: 285px;
+  width: 100%;
 
   margin: 44px 0 44px;
   padding: 0 44px;
@@ -61,8 +56,7 @@
 .bottom {
   display: flex;
   justify-content: space-between;
-
-  height: 285px;
+  align-items: stretch;
 
   @include _760 {
     display: none;

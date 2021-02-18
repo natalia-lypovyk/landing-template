@@ -4,9 +4,6 @@
 .footer {
   padding: 107px 0;
 
-  background-color: $c-main;
-  color: $c-main-inv;
-
   @include _760 {
     padding: 50px 30px;
   }
@@ -84,6 +81,10 @@
     align-items: center;
 
     margin-bottom: 20px;
+
+    &:hover .info__icon {
+      animation: pulse 1.5s linear infinite backwards;
+    }
   }
 
   &__phone {
@@ -92,9 +93,17 @@
 
     margin-bottom: 30px;
 
-    & .icon {
+    & .info__icon {
       margin: 0 13px;
     }
+
+    &:hover .info__icon {
+      animation: pulse 1.5s linear infinite backwards;
+    }
+  }
+
+  &__text:last-child {
+    display: flex;
   }
 }
 
@@ -115,5 +124,17 @@
     &:hover {
       filter: invert(70%) sepia(85%) saturate(5100%) hue-rotate(210deg) brightness(100%) contrast(93%);
     }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(0.95);
   }
 }
