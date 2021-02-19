@@ -119,6 +119,7 @@ img {
 }
 
 .nav {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -127,12 +128,98 @@ img {
   margin: 0 auto 90px;
   padding: 20px 30px;
 }
+@media screen and (max-width: 540px) {
+  .nav {
+    padding: 20px;
+  }
+}
 .nav__logo {
   width: auto;
   height: 100%;
 }
 .nav__login {
   width: 139px;
+}
+@media screen and (max-width: 540px) {
+  .nav__login {
+    width: 100px;
+  }
+}
+.nav__mobile-button {
+  display: none;
+}
+@media screen and (max-width: 760px) {
+  .nav__mobile-button {
+    display: block;
+    background-color: transparent;
+    position: relative;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+  }
+}
+
+.line {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: var(--c-main-inv);
+  transition: all var(--a-short);
+}
+.line__top {
+  top: 0;
+}
+.line__middle {
+  top: 11px;
+}
+.line__bottom {
+  bottom: 0;
+}
+
+.mobile-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 0;
+  overflow: hidden;
+  background-color: var(--c-main);
+  transition: all 1s linear;
+}
+.mobile-list__item {
+  width: 100%;
+  height: 0;
+  font-size: 20px;
+  text-align: center;
+  transition: all var(--a-short);
+}
+.mobile-list__item:hover {
+  background-color: var(--c-accent);
+}
+
+.nav__mobile-button:focus .line__top {
+  transform: rotate(47deg);
+  transform-origin: left center;
+}
+.nav__mobile-button:focus .line__bottom {
+  transform: rotate(-47deg);
+  transform-origin: left center;
+}
+.nav__mobile-button:focus .line__middle {
+  display: none;
+}
+
+.nav__mobile-button:focus ~ .mobile-list {
+  max-height: 500px;
+}
+
+.nav__mobile-button:focus ~ .mobile-list .mobile-list__item {
+  height: 80px;
+  line-height: 80px;
 }
 
 .nav-list {
