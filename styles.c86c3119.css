@@ -145,36 +145,6 @@ img {
     width: 100px;
   }
 }
-.nav__mobile-button {
-  display: none;
-}
-@media screen and (max-width: 760px) {
-  .nav__mobile-button {
-    display: block;
-    background-color: transparent;
-    position: relative;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
-  }
-}
-
-.line {
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background-color: var(--c-main-inv);
-  transition: all var(--a-short);
-}
-.line__top {
-  top: 0;
-}
-.line__middle {
-  top: 11px;
-}
-.line__bottom {
-  bottom: 0;
-}
 
 .mobile-list {
   position: absolute;
@@ -201,23 +171,56 @@ img {
   background-color: var(--c-accent);
 }
 
-.nav__mobile-button:focus .line__top {
-  transform: rotate(47deg);
-  transform-origin: left center;
+.burger {
+  opacity: 0;
 }
-.nav__mobile-button:focus .line__bottom {
-  transform: rotate(-47deg);
-  transform-origin: left center;
-}
-.nav__mobile-button:focus .line__middle {
+.burger__label {
   display: none;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+@media screen and (max-width: 760px) {
+  .burger__label {
+    display: block;
+    position: relative;
+  }
+  .burger__label > span, .burger__label > span::before, .burger__label > span::after {
+    display: block;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    background-color: var(--c-main-inv);
+    transition: all var(--a-short);
+  }
+  .burger__label > span::before {
+    content: "";
+    top: -10px;
+  }
+  .burger__label > span::after {
+    content: "";
+    top: 10px;
+  }
 }
 
-.nav__mobile-button:focus ~ .mobile-list {
+.burger:checked ~ .burger__label span {
+  transform: rotate(45deg);
+}
+.burger:checked ~ .burger__label span::before {
+  top: 0;
+  transform: rotate(0);
+}
+.burger:checked ~ .burger__label span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.burger:checked ~ .mobile-list {
   max-height: 500px;
 }
 
-.nav__mobile-button:focus ~ .mobile-list .mobile-list__item {
+.burger:checked ~ .mobile-list .mobile-list__item {
   height: 80px;
   line-height: 80px;
 }
