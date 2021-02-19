@@ -91,26 +91,24 @@
     height: 100%;
   }
 
-  &__list {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    height: 78px;
-
-    animation: appearFromTop 2s ease-in;
-
-    @include _760 {
-      display: none;
-    }
-  }
-
   &__login {
     width: 139px;
   }
 }
 
-.list {
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 78px;
+
+  animation: appearFromTop 2s ease-in;
+
+  @include _760 {
+    display: none;
+  }
+
   &__item {
     transition: color $a-short;
   }
