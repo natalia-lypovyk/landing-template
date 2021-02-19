@@ -103,46 +103,6 @@
       width: 100px;
     }
   }
-
-  &__mobile-button {
-    display: none;
-
-    @include _760 {
-      display: block;
-      background-color: transparent;
-
-      position: relative;
-
-      width:30px;
-      height: 25px;
-
-      cursor: pointer;
-    }
-  }
-}
-
-.line {
-  position: absolute;
-
-  width: 100%;
-  height: 3px;
-
-  background-color: var(--c-main-inv);
-
-  transition: all var(--a-short);
-
-
-  &__top {
-    top: 0;
-  }
-
-  &__middle {
-    top: 11px;
-  }
-
-  &__bottom {
-    bottom: 0;
-  }
 }
 
 .mobile-list {
@@ -178,27 +138,68 @@
   }
 }
 
-.nav__mobile-button:focus .line {
-  &__top {
-    transform: rotate(47deg);
-    transform-origin: left center;
-  }
+.burger {
+  opacity: 0;
 
-  &__bottom {
-    transform: rotate(-47deg);
-    transform-origin: left center;
-  }
-
-  &__middle {
+  &__label {
     display: none;
+
+    width: 30px;
+    height: 25px;
+
+    cursor: pointer;
+
+    @include _760 {
+      display: block;
+      position: relative;
+
+      & > span,
+      & > span::before,
+      & > span::after {
+        display: block;
+
+        width: 100%;
+        height: 3px;
+
+        position: absolute;
+        top: 50%;
+
+        background-color: var(--c-main-inv);
+        transition: all var(--a-short);
+      }
+
+      & > span::before {
+        content: "";
+        top: -10px;
+      }
+
+      & > span::after {
+        content: "";
+        top: 10px;
+      }
+    }
   }
 }
 
-.nav__mobile-button:focus ~ .mobile-list {
+.burger:checked ~ .burger__label span {
+  transform: rotate(45deg);
+
+  &::before {
+    top:0;
+    transform: rotate(0);
+  }
+
+  &::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+}
+
+.burger:checked ~ .mobile-list {
   max-height: 500px;
 }
 
-.nav__mobile-button:focus ~ .mobile-list .mobile-list__item {
+.burger:checked ~ .mobile-list .mobile-list__item {
   height: 80px;
 
   line-height: 80px;
