@@ -55,9 +55,6 @@
 
   padding: 10px 30px;
 
-  border: 1px solid $c-main-inv;
-
-  background-color: transparent;
   color: $c-main-inv;
 
   font-family: inherit;
@@ -66,31 +63,27 @@
 
   transition: all $a-short;
 
-  &:hover {
-    background-color: $c-main-inv;
-    color: $c-main;
-  }
-}
-
-.accent-button {
-  display: block;
-
-  padding: 10px 36px;
-
-  border: 1px solid $c-accent;
-
-  background-color: $c-accent;
-  color: $c-main-inv;
-
-  font-family: inherit;
-  letter-spacing: 1px;
-
-  transition: all $a-short;
-
-  &:hover {
+  &_contained {
     border: 1px solid $c-accent;
 
-    color: $c-accent;
+    background-color: $c-accent;
+
+    &:hover {
+      border: 1px solid $c-accent;
+
+      color: $c-accent;
+      background-color: transparent;
+    }
+  }
+
+  &_outlined {
+    border: 1px solid $c-main-inv;
+
     background-color: transparent;
+
+    &:hover {
+      background-color: $c-main-inv;
+      color: $c-main;
+    }
   }
 }
