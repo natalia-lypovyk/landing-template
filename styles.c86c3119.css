@@ -43,6 +43,18 @@ img {
   outline: none;
 }
 
+:root {
+  --c-main: #181818;
+  --c-main-inv: #fff;
+  --c-accent: #4452fe;
+  --c-secondary-text: #5c5c5c;
+  --c-secondary-bg: #343434;
+  --c-secondary-bg-mobile: #1e1e1e;
+  --c-dark: #000;
+  --a-short: 0.3s;
+  --a-long: 2s;
+}
+
 .header {
   padding-bottom: 50px;
 }
@@ -54,7 +66,7 @@ img {
   font-size: 80px;
   text-align: center;
   line-height: 88px;
-  animation: appear 2s linear;
+  animation: appear var(--a-long) linear;
 }
 @media screen and (max-width: 760px) {
   .header__title {
@@ -119,7 +131,11 @@ img {
   width: auto;
   height: 100%;
 }
-.nav__list {
+.nav__login {
+  width: 139px;
+}
+
+.nav-list {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -127,21 +143,17 @@ img {
   animation: appearFromTop 2s ease-in;
 }
 @media screen and (max-width: 760px) {
-  .nav__list {
+  .nav-list {
     display: none;
   }
 }
-.nav__login {
-  width: 139px;
+.nav-list__item {
+  transition: color var(--a-short);
 }
-
-.list__item {
-  transition: color 0.3s;
+.nav-list__item:hover {
+  color: var(--c-accent);
 }
-.list__item:hover {
-  color: #4452fe;
-}
-.list__item:not(:last-child) {
+.nav-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -246,8 +258,8 @@ img {
 
 .contents {
   padding: 50px 0 150px;
-  background-color: #181818;
-  color: #fff;
+  background-color: var(--c-main);
+  color: var(--c-main-inv);
 }
 .contents__title {
   margin-bottom: 10px;
@@ -279,8 +291,8 @@ img {
   max-width: 476px;
   padding: 40px 35px;
   border-radius: 10px;
-  background-color: #fff;
-  color: #181818;
+  background-color: var(--c-main-inv);
+  color: var(--c-main);
 }
 .card:first-of-type {
   margin-right: 20px;
@@ -301,7 +313,7 @@ img {
   max-width: 280px;
   margin: 0 auto;
   text-align: center;
-  color: #5c5c5c;
+  color: var(--c-secondary-text);
 }
 .card__button {
   margin: 57px auto;
@@ -402,10 +414,11 @@ img {
 .brands__image {
   height: 100%;
   width: auto;
-  transition: transform 0.3s;
+  transition: all var(--a-short);
+  filter: grayscale(1);
 }
-.brands__image:hover {
-  transform: scale(1.1);
+.brands__image:hover, .brands__image:focus {
+  filter: grayscale(0);
 }
 
 .testimonials {
@@ -458,13 +471,13 @@ img {
 }
 
 .try {
-  background-color: #181818;
-  color: #fff;
+  background-color: var(--c-main);
+  color: var(--c-main-inv);
   padding: 80px 0;
 }
 @media screen and (max-width: 900px) {
   .try {
-    background-color: #1e1e1e;
+    background-color: var(--c-secondary-bg-mobile);
   }
 }
 
@@ -477,13 +490,13 @@ img {
   height: 370px;
   margin: 0 auto;
   border-radius: 33px;
-  background-color: #343434;
+  background-color: var(--c-secondary-bg);
   overflow: hidden;
 }
 @media screen and (max-width: 900px) {
   .block {
     border-radius: 0;
-    background-color: #1e1e1e;
+    background-color: var(--c-secondary-bg-mobile);
   }
 }
 @media screen and (max-width: 760px) {
@@ -528,7 +541,6 @@ img {
 .block__image {
   position: absolute;
   right: 0;
-  top: 40px;
   width: 50%;
   height: auto;
 }
@@ -619,6 +631,7 @@ img {
 }
 .info__text:last-child {
   display: flex;
+  align-items: center;
 }
 
 .socials {
@@ -648,8 +661,8 @@ img {
   }
 }
 .theme {
-  background-color: #181818;
-  color: #fff;
+  background-color: var(--c-main);
+  color: var(--c-main-inv);
 }
 
 .title {
@@ -695,33 +708,28 @@ img {
   display: block;
   height: 52px;
   padding: 10px 30px;
-  border: 1px solid #fff;
-  background-color: transparent;
-  color: #fff;
+  color: var(--c-main-inv);
   font-family: inherit;
   font-weight: 400;
   letter-spacing: 1px;
-  transition: all 0.3s;
+  transition: all var(--a-short);
 }
-.button:hover {
-  background-color: #fff;
-  color: #181818;
+.button_contained {
+  border: 1px solid var(--c-accent);
+  background-color: var(--c-accent);
 }
-
-.accent-button {
-  display: block;
-  padding: 10px 36px;
-  border: 1px solid #4452fe;
-  background-color: #4452fe;
-  color: #fff;
-  font-family: inherit;
-  letter-spacing: 1px;
-  transition: all 0.3s;
-}
-.accent-button:hover {
-  border: 1px solid #4452fe;
-  color: #4452fe;
+.button_contained:hover {
+  border: 1px solid var(--c-accent);
+  color: var(--c-accent);
   background-color: transparent;
+}
+.button_outlined {
+  border: 1px solid var(--c-main-inv);
+  background-color: transparent;
+}
+.button_outlined:hover {
+  background-color: var(--c-main-inv);
+  color: var(--c-main);
 }
 
 /*# sourceMappingURL=/styles.c86c3119.css.map */
