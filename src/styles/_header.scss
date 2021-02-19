@@ -1,4 +1,3 @@
-@import "vars";
 @import "mixins";
 
 .header {
@@ -17,7 +16,7 @@
     text-align: center;
     line-height: 88px;
 
-    animation: appear $a-long linear;
+    animation: appear var(--a-long) linear;
 
     @include _760 {
       font-size: 52px;
@@ -110,11 +109,11 @@
   }
 
   &__item {
-    transition: color $a-short;
+    transition: color var(--a-short);
   }
 
   &__item:hover {
-    color: $c-accent;
+    color: var(--c-accent);
   }
 
   &__item:not(:last-child) {

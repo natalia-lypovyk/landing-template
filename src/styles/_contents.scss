@@ -1,11 +1,10 @@
-@import "vars";
 @import "mixins";
 
 .contents {
   padding: 50px 0 150px;
 
-  background-color: $c-main;
-  color: $c-main-inv;
+  background-color: var(--c-main);
+  color: var(--c-main-inv);
 
   &__title {
     margin-bottom: 10px;
@@ -43,8 +42,8 @@
 
   border-radius: 10px;
 
-  background-color: $c-main-inv;
-  color: $c-main;
+  background-color: var(--c-main-inv);
+  color: var(--c-main);
 
   &:first-of-type {
     margin-right: 20px;
@@ -72,7 +71,7 @@
 
     text-align: center;
 
-    color: $c-secondary-text;
+    color: var(--c-secondary-text);
   }
 
   &__button {

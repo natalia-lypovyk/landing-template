@@ -1,9 +1,8 @@
-@import "vars";
 @import "mixins";
 
 .theme {
-  background-color: $c-main;
-  color: $c-main-inv;
+  background-color: var(--c-main);
+  color: var(--c-main-inv);
 }
 
 .title {
@@ -55,35 +54,35 @@
 
   padding: 10px 30px;
 
-  color: $c-main-inv;
+  color: var(--c-main-inv);
 
   font-family: inherit;
   font-weight: 400;
   letter-spacing: 1px;
 
-  transition: all $a-short;
+  transition: all var(--a-short);
 
   &_contained {
-    border: 1px solid $c-accent;
+    border: 1px solid var(--c-accent);
 
-    background-color: $c-accent;
+    background-color: var(--c-accent);
 
     &:hover {
-      border: 1px solid $c-accent;
+      border: 1px solid var(--c-accent);
 
-      color: $c-accent;
+      color: var(--c-accent);
       background-color: transparent;
     }
   }
 
   &_outlined {
-    border: 1px solid $c-main-inv;
+    border: 1px solid var(--c-main-inv);
 
     background-color: transparent;
 
     &:hover {
-      background-color: $c-main-inv;
-      color: $c-main;
+      background-color: var(--c-main-inv);
+      color: var(--c-main);
     }
   }
 }
