@@ -1,4 +1,3 @@
-@import "vars";
 @import "mixins";
 
 .partners {
@@ -39,10 +38,13 @@
     height: 100%;
     width: auto;
 
-    transition: transform $a-short;
+    transition: all var(--a-short);
 
-    &:hover {
-      transform: scale(1.1);
+    filter: grayscale(1);
+
+    &:hover,
+    &:focus {
+      filter: grayscale(0);
     }
   }
 }
