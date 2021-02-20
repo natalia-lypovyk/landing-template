@@ -10,58 +10,83 @@
 
 <body>
   <header class="header theme">
-    <nav class="header__navigation nav">
+    <label for="burger">
+      <nav class="header__navigation nav">
+        <img
+          src="images/logo-dark.svg"
+          alt="Logo"
+          class="nav__logo"
+        />
+
+        <ul class="nav__list nav-list">
+          <li class="nav-list__item">
+            <a href="#" class="nav-list__link">Home</a>
+          </li>
+
+          <li class="nav-list__item">
+            <a href="#" class="nav-list__link">Product</a>
+          </li>
+
+          <li class="nav-list__item">
+            <a href="#" class="nav-list__link">About</a>
+          </li>
+
+          <li class="nav-list__item">
+            <a href="#" class="nav-list__link">Contact</a>
+          </li>
+        </ul>
+
+        <button class="nav__login button button_outlined">
+          Login
+        </button>
+
+        <input type="checkbox" id="burger" class="burger">
+        <div class="burger__label">
+          <span></span>
+        </div>
+
+        <ul class="nav__mobile mobile-list">
+          <li class="mobile-list__item">
+            <a href="#" class="mobile-list__link">Home</a>
+          </li>
+
+          <li class="mobile-list__item">
+            <a href="#" class="mobile-list__link">Product</a>
+          </li>
+
+          <li class="mobile-list__item">
+            <a href="#" class="mobile-list__link">About</a>
+          </li>
+
+          <li class="mobile-list__item">
+            <a href="#" class="mobile-list__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <h1 class="header__title">Work at the speed of thought</h1>
+
+      <p class="header__subtitle">
+        Most calendars are designed for teams. Slate is designed for
+        freelancers who want a simple way to plan their schedule.
+      </p>
+
+      <div class="buttons">
+        <button class="buttons__try button button_contained">
+          Try For Free
+        </button>
+
+        <button class="buttons__learn button button_outlined">
+          Learn More
+        </button>
+      </div>
+
       <img
-        src="images/logo-dark.svg"
-        alt="Logo"
-        class="nav__logo"
+        src="images/screens.png"
+        alt="screens"
+        class="header__background"
       />
-
-      <ul class="nav__list nav-list">
-        <li class="nav-list__item">
-          <a href="#" class="nav-list__link">Home</a>
-        </li>
-
-        <li class="nav-list__item">
-          <a href="#" class="nav-list__link">Product</a>
-        </li>
-
-        <li class="nav-list__item">
-          <a href="#" class="nav-list__link">About</a>
-        </li>
-
-        <li class="nav-list__item">
-          <a href="#" class="nav-list__link">Contact</a>
-        </li>
-      </ul>
-
-      <button class="nav__login button button_outlined">
-        Login
-      </button>
-    </nav>
-
-    <h1 class="header__title">Work at the speed of thought</h1>
-
-    <p class="header__subtitle">
-      Most calendars are designed for teams. Slate is designed for
-      freelancers who want a simple way to plan their schedule.
-    </p>
-
-    <div class="buttons">
-      <button class="buttons__try button button_contained">
-        Try For Free
-      </button>
-
-      <button class="buttons__learn button button_outlined">
-        Learn More
-      </button>
-    </div>
-
-    <img
-      src="images/screens.png"
-      alt="screens"
-      class="header__background"
-    />
+    </label>
   </header>
 
   <main>
