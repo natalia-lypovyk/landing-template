@@ -1,14 +1,10 @@
 'use strict';
 
-const openMenu = () => {
-  const burger = document.querySelector('.burger');
-  const menu = document.querySelector('.mobile-list');
+const burger = document.querySelector('.burger');
+const menu = document.querySelector('.mobile-list');
 
-  burger.addEventListener('click', () => {
-    burger.classList.toggle('burger--toggle');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('burger--toggle');
 
-    menu.classList.toggle('mobile-list--opened');
-  });
-};
-
-openMenu();
+  menu.classList.toggle('mobile-list--opened');
+});
