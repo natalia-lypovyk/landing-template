@@ -20,13 +20,11 @@
 
     border-radius: 8px;
 
-    object-fit: cover;
-
     &:not(:last-child) {
       margin-right: 15px;
     }
 
-    @include _760 {
+    @include respond-to('medium') {
       max-width: 225px;
 
       &:not(:last-child) {
@@ -36,17 +34,20 @@
   }
 }
 
-.top {
+.top,
+.bottom {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+}
 
+.top {
   width: 100%;
 
   margin: 44px 0 44px;
-  padding: 0 44px;
+  padding-right: 44px;
 
-  @include _760 {
+  @include respond-to('medium') {
     flex-direction: column;
     align-items: center;
 
@@ -55,11 +56,7 @@
 }
 
 .bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-
-  @include _760 {
+  @include respond-to('medium') {
     display: none;
   }
 }
