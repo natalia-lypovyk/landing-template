@@ -35,9 +35,6 @@
   }
 
   &__image {
-    height: 100%;
-    width: auto;
-
     transition: all var(--t-short);
 
     filter: grayscale(1);

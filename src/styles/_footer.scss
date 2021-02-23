@@ -92,7 +92,7 @@
 
     margin-bottom: 30px;
 
-    & .info__icon {
+    .info__icon {
       margin: 0 13px;
     }
 
@@ -104,6 +104,11 @@
   &__text:last-child {
     display: flex;
     align-items: center;
+  }
+
+  &__icon {
+    height: 100%;
+    width: auto;
   }
 }
 

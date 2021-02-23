@@ -81,12 +81,13 @@
     right: 0;
 
     width: 50%;
-    height: auto;
+    height: 100%;
     
     @include _760 {
       position: static;
 
       width: 80%;
+      height: auto;
     }
   }
 }
