@@ -6,5 +6,5 @@ const menu = document.querySelector('.mobile-list');
 burger.addEventListener('click', () => {
   burger.classList.toggle('burger--toggle');
 
-  menu.classList.toggle('mobile-list--opened');
+  menu.classList.toggle('mobile-list--open');
 });
