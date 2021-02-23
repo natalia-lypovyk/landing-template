@@ -6,7 +6,7 @@
   padding: 80px 0;
 
   @include _900 {
-    background-color: var(--c-secondary-bg-mobile);
+    background-color: var(--faint-strong);
   }
 }
 
@@ -24,14 +24,14 @@
 
   border-radius: 33px;
 
-  background-color: var(--c-secondary-bg);
+  background-color: var(--faint-strong-down);
 
   overflow: hidden;
 
   @include _900 {
     border-radius: 0;
 
-    background-color: var(--c-secondary-bg-mobile);
+    background-color: var(--faint-strong);
   }
 
   @include _760 {

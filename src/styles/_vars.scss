@@ -1,12 +1,11 @@
 :root {
-  --c-main: #181818;
-  --c-main-inv: #fff;
-  --c-accent: #4452fe;
-  --c-secondary-text: #5c5c5c;
-  --c-secondary-bg: #343434;
-  --c-secondary-bg-mobile: #1e1e1e;
-  --c-dark: #000;
+  --base-strong: #181818;
+  --base-weak: #fff;
+  --accent: #4452fe;
+  --faint-weak: #5c5c5c;
+  --faint-strong-down: #343434;
+  --faint-strong: #1e1e1e;
 
-  --a-short: 0.3s;
-  --a-long: 2s;
+  --t-short: 0.3s;
+  --t-long: 2s;
 }

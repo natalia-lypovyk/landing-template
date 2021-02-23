@@ -18,7 +18,7 @@
     text-align: center;
     line-height: 88px;
 
-    animation: appear var(--a-long) linear;
+    animation: appear var(--t-long) linear;
 
     @include _760 {
       font-size: 52px;
@@ -119,9 +119,9 @@
   flex-direction: column;
   align-items: center;
 
-  max-height: 0;
+  height: 0;
 
-  background-color: var(--c-main);
+  background-color: var(--base-strong);
 
   transition: all 1s linear;
 
@@ -134,12 +134,12 @@
     font-size: 20px;
     text-align: center;
 
-    color: var(--c-main);
+    color: var(--base-strong);
 
     transition: height 0.5s, color 0.2s;
 
     &:hover {
-      background-color: var(--c-accent);
+      background-color: var(--accent);
     }
   }
 }
@@ -164,9 +164,9 @@
     width: 100%;
     height: 3px;
 
-    background-color: var(--c-main-inv);
+    background-color: var(--base-weak);
 
-    transition: transform var(--a-short), opacity var(--a-short);
+    transition: transform var(--t-short), opacity var(--t-short);
     transform-origin: left center;
 
     &_top {
@@ -198,14 +198,13 @@
 }
 
 .mobile-list--opened {
-  max-height: 100vh;
-  min-height: 100vh;
+  height: 100vh;
 
   & .mobile-list__item {
     height: 80px;
     line-height: 80px;
 
-    color: var(--c-main-inv);
+    color: var(--base-weak);
   }
 }
 
@@ -223,11 +222,11 @@
   }
 
   &__item {
-    transition: color var(--a-short);
+    transition: color var(--t-short);
   }
 
   &__item:hover {
-    color: var(--c-accent);
+    color: var(--accent);
   }
 
   &__item:not(:last-child) {

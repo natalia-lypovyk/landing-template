@@ -23,6 +23,6 @@
 }
 
 @mixin theme {
-  background-color: var(--c-main);
-  color: var(--c-main-inv);
+  background-color: var(--base-strong);
+  color: var(--base-weak);
 }

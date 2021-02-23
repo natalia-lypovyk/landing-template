@@ -1,8 +1,8 @@
 @import "mixins";
 
 .theme {
-  background-color: var(--c-main);
-  color: var(--c-main-inv);
+  background-color: var(--base-strong);
+  color: var(--base-weak);
 }
 
 .title {
@@ -54,35 +54,35 @@
 
   padding: 10px 30px;
 
-  color: var(--c-main-inv);
+  color: var(--base-weak);
 
   font-family: inherit;
   font-weight: 400;
   letter-spacing: 1px;
 
-  transition: all var(--a-short);
+  transition: all var(--t-short);
 
   &_contained {
-    border: 1px solid var(--c-accent);
+    border: 1px solid var(--accent);
 
-    background-color: var(--c-accent);
+    background-color: var(--accent);
 
     &:hover {
-      border: 1px solid var(--c-accent);
+      border: 1px solid var(--accent);
 
-      color: var(--c-accent);
+      color: var(--accent);
       background-color: transparent;
     }
   }
 
   &_outlined {
-    border: 1px solid var(--c-main-inv);
+    border: 1px solid var(--base-weak);
 
     background-color: transparent;
 
     &:hover {
-      background-color: var(--c-main-inv);
-      color: var(--c-main);
+      background-color: var(--base-weak);
+      color: var(--base-strong);
     }
   }
 }

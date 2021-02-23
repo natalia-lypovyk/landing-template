@@ -3,8 +3,8 @@
 .contents {
   padding: 50px 0 150px;
 
-  background-color: var(--c-main);
-  color: var(--c-main-inv);
+  background-color: var(--base-strong);
+  color: var(--base-weak);
 
   &__title {
     margin-bottom: 10px;
@@ -42,8 +42,8 @@
 
   border-radius: 10px;
 
-  background-color: var(--c-main-inv);
-  color: var(--c-main);
+  background-color: var(--base-weak);
+  color: var(--base-strong);
 
   &:first-child {
     margin-right: 20px;
