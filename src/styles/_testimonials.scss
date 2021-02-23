@@ -17,7 +17,7 @@
 
     margin: 0 auto;
 
-    @include _760 {
+    @include respond-to('medium') {
       grid-template-columns: 1fr;
       justify-items: center;
     }
@@ -33,7 +33,7 @@
   border: 1px solid #dedede;
   border-radius: 10px;
 
-  @include _540 {
+  @include respond-to('small') {
     width: 80%;
 
     font-size: 14px;
@@ -46,7 +46,7 @@
 
     margin-bottom: 50px;
 
-    @include _540 {
+    @include respond-to('small') {
       margin-bottom: 25px;
     }
   }

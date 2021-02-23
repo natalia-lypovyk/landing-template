@@ -3,7 +3,7 @@
 .footer {
   padding: 107px 0;
 
-  @include _760 {
+  @include respond-to('medium') {
     padding: 50px 30px;
   }
 
@@ -18,14 +18,14 @@
 
     margin: 0 auto;
 
-    @include _760 {
+    @include respond-to('medium') {
       grid-template-columns: repeat(3, 1fr);
       grid-template-areas:
         "col1 col2 col3"
         "info info info";
     }
 
-    @include _540 {
+    @include respond-to('small') {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(4, 1fr);
       grid-template-areas:
@@ -38,7 +38,7 @@
 }
 
 .column {
-  @include _760 {
+  @include respond-to('medium') {
     margin-bottom: 30px;
   }
 
@@ -59,16 +59,10 @@
     margin-bottom: 10px;
   }
 
-  &__1 {
-    grid-area: col1;
-  }
-
-  &__2 {
-    grid-area: col2;
-  }
-
-  &__3 {
-    grid-area: col3;
+  @for $i from 1 through 3 {
+    &__#{$i} {
+      grid-area: col#{$i};
+    }
   }
 }
 
