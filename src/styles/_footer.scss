@@ -80,10 +80,6 @@
     align-items: center;
 
     margin-bottom: 20px;
-
-    &:hover .info__icon {
-      animation: pulse 1.5s linear infinite backwards;
-    }
   }
 
   &__phone {
@@ -95,10 +91,14 @@
     .info__icon {
       margin: 0 13px;
     }
+  }
 
-    &:hover .info__icon {
-      animation: pulse 1.5s linear infinite backwards;
-    }
+  &__locality:hover .info__icon,
+  &__phone:hover .info__icon {
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 
   &__text:last-child {
@@ -134,12 +134,22 @@
 
 @keyframes pulse {
   0% {
-    transform: scale(0.95);
+    transform: scale(1);
   }
-  50% {
+
+  25% {
     transform: scale(1.05);
   }
-  100% {
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
     transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }

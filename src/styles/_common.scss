@@ -60,7 +60,7 @@
   font-weight: 400;
   letter-spacing: 1px;
 
-  transition: all var(--t-short);
+  transition: all var(--transition-short);
 
   &_contained {
     border: 1px solid var(--accent);

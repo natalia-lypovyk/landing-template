@@ -35,7 +35,7 @@
   }
 
   &__image {
-    transition: all var(--t-short);
+    transition: all var(--transition-short);
 
     filter: grayscale(1);
 

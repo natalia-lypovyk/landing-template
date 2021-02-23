@@ -18,7 +18,7 @@
     text-align: center;
     line-height: 88px;
 
-    animation: appear var(--t-long) linear;
+    animation: appear var(--transition-long) linear;
 
     @include _760 {
       font-size: 52px;
@@ -160,7 +160,7 @@
 
     background-color: var(--base-weak);
 
-    transition: transform var(--t-short), opacity var(--t-short);
+    transition: transform var(--transition-short), opacity var(--transition-short);
     transform-origin: left center;
 
     &_top {
@@ -216,7 +216,7 @@
   }
 
   &__item {
-    transition: color var(--t-short);
+    transition: color var(--transition-short);
   }
 
   &__item:hover {
