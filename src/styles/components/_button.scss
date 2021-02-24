@@ -1,0 +1,39 @@
+.button {
+  display: block;
+
+  height: 52px;
+
+  padding: 10px 30px;
+
+  color: var(--base-weak);
+
+  font-family: inherit;
+  font-weight: 400;
+  letter-spacing: 1px;
+
+  transition: all var(--transition-short);
+
+  &_contained {
+    border: 1px solid var(--accent);
+
+    background-color: var(--accent);
+
+    &:hover {
+      border: 1px solid var(--accent);
+
+      color: var(--accent);
+      background-color: transparent;
+    }
+  }
+
+  &_outlined {
+    border: 1px solid var(--base-weak);
+
+    background-color: transparent;
+
+    &:hover {
+      background-color: var(--base-weak);
+      color: var(--base-strong);
+    }
+  }
+}

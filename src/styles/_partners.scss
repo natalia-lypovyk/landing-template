@@ -1,0 +1,47 @@
+@import "mixins";
+
+.partners {
+  padding: 50px 0;
+}
+
+.brands {
+  max-width: 832px;
+  width: 90%;
+
+  margin: 0 auto;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    height: 70px;
+
+    @include respond-to('medium') {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      grid-row-gap: 30px;
+
+      height: fit-content;
+    }
+
+    @include respond-to('small') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__button {
+    margin: 50px auto 0;
+  }
+
+  &__image {
+    transition: all var(--transition-short);
+
+    filter: grayscale(1);
+
+    &:hover,
+    &:focus {
+      filter: grayscale(0);
+    }
+  }
+}

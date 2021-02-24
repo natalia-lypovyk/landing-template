@@ -1,0 +1,149 @@
+@import "mixins";
+
+.footer {
+  padding: 107px 0;
+
+  @include respond-to('medium') {
+    padding: 50px 30px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+    "col1 col2 col3 . info info";
+
+    max-width: 1031px;
+    width: 90%;
+
+    margin: 0 auto;
+
+    @include respond-to('medium') {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "col1 col2 col3"
+        "info info info";
+    }
+
+    @include respond-to('small') {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas:
+        "col1"
+        "col2"
+        "col3"
+        "info";
+    }
+  }
+}
+
+.column {
+  @include respond-to('medium') {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    display: block;
+
+    margin-bottom: 30px;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    line-height: 30px;
+  }
+  
+  &__text {
+    display: block;
+
+    margin-bottom: 10px;
+  }
+
+  @for $i from 1 through 3 {
+    &__#{$i} {
+      grid-area: col#{$i};
+    }
+  }
+}
+
+.info {
+  grid-area: info;
+
+  &__locality {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    .info__icon {
+      margin: 0 13px;
+    }
+  }
+
+  &__locality:hover .info__icon,
+  &__phone:hover .info__icon {
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  &__text:last-child {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+
+  height: 40px;
+
+  padding-left: 10px;
+
+  &__icon {
+    height: 100%;
+    width: auto;
+
+    margin-right: 25px;
+
+    &:hover {
+      filter: invert(70%) sepia(85%) saturate(5100%) hue-rotate(210deg) brightness(100%) contrast(93%);
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.05);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,266 @@
+@import "mixins";
+
+.header {
+  position: relative;
+
+  padding-bottom: 50px;
+
+  &__title {
+    display: block;
+
+    max-width: 750px;
+    width: 90%;
+
+    margin: 0 auto 15px;
+
+    font-size: 80px;
+
+    text-align: center;
+    line-height: 88px;
+
+    animation: appear var(--transition-long) linear;
+
+    @include respond-to('medium') {
+      font-size: 52px;
+      font-weight: 400;
+
+      line-height: 62px;
+    }
+
+    @include respond-to('small') {
+      font-size: 48px;
+      line-height: 58px;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+
+    max-width: 605px;
+    width: 90%;
+
+    margin: 0 auto 85px;
+
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+
+    animation: appear 2s 1s linear backwards;
+
+    @include respond-to('medium') {
+      margin-bottom: 50px;
+
+      font-size: 20px;
+      font-weight: 400;
+
+      line-height: 30px;
+    }
+
+    @include respond-to('small') {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+
+  &__background {
+    max-height: 840px;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+  }
+}
+
+.nav {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1097px;
+  height: 119px;
+
+  margin: 0 auto 90px;
+  padding: 20px 30px;
+
+  @include respond-to('small') {
+    padding: 20px;
+  }
+
+  &__logo {
+    width: auto;
+    height: 100%;
+  }
+
+  &__login {
+    width: 139px;
+
+    @include respond-to('small') {
+      width: 100px;
+    }
+  }
+}
+
+.mobile-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 0;
+
+  background-color: var(--base-strong);
+
+  transition: all 1s linear;
+
+  overflow: hidden;
+
+  &__item {
+    width: 100%;
+    height: 0;
+
+    font-size: 20px;
+    text-align: center;
+
+    color: var(--base-strong);
+
+    transition: height 0.5s, color 0.2s;
+
+    &:hover {
+      background-color: var(--accent);
+    }
+  }
+}
+
+.burger {
+  display: none;
+
+  position: relative;
+
+  width: 30px;
+  height: 25px;
+
+  cursor: pointer;
+
+  @include respond-to('medium') {
+    display: block;
+  }
+
+  &__item {
+    position: absolute;
+
+    width: 100%;
+    height: 3px;
+
+    background-color: var(--base-weak);
+
+    transition: transform var(--transition-short), opacity var(--transition-short);
+    transform-origin: left center;
+
+    &_top {
+      top: 0;
+    }
+
+    &_middle {
+      top: 11px;
+    }
+
+    &_bottom {
+      bottom: 0;
+    }
+  }
+}
+
+.burger--toggle .burger__item {
+  &_top {
+    transform: rotate(47deg);
+  }
+
+  &_middle {
+    opacity: 0;
+  }
+
+  &_bottom {
+    transform: rotate(-47deg);
+  }
+}
+
+.mobile-list--open {
+  height: 100vh;
+
+  & .mobile-list__item {
+    height: 80px;
+    line-height: 80px;
+
+    color: var(--base-weak);
+  }
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 78px;
+
+  animation: appearFromTop 2s ease-in;
+
+  @include respond-to('medium') {
+    display: none;
+  }
+
+  &__item {
+    transition: color var(--transition-short);
+  }
+
+  &__item:hover {
+    color: var(--accent);
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+
+  width: 387px;
+
+  margin: 0 auto 35px;
+
+  &__try {
+    @include respond-to('medium') {
+      margin-bottom: 20px;
+    }
+  }
+
+  @include respond-to('medium') {
+    flex-direction: column;
+
+    width: 175px;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes appearFromTop {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}

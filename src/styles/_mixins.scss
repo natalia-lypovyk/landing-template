@@ -1,0 +1,20 @@
+$breakpoints: (
+  'small': (max-width: 540px),
+  'medium': (max-width: 760px),
+  'large': (max-width: 900px),
+  'x-large': (max-width: 1050px),
+);
+
+@mixin respond-to($breakpoint) {
+  $media: map-get($breakpoints, $breakpoint);
+
+  @media #{inspect($media)} {
+    @content;
+  }
+}
+
+
+@mixin theme {
+  background-color: var(--base-strong);
+  color: var(--base-weak);
+}
